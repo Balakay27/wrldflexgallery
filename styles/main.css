@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    background-image: url(../images/wrld21.jpg);
+    background-attachment: fixed;
+
+}
+body{
+    background-image: url(../images/wrld21.jpg);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    align-items: center;
+}
+
+header{
+    border-bottom: 2px ridge rgb(63, 40, 18);
+    display: flex;
+    align-items: center;
+    background-color: rgb(70, 69, 68);
+}
+header img{
+    max-width: 20%;
+    display: flex;
+    margin: 3em;
+    border: 2px ridge violet;
+    border-radius: 3em;
+}
+header h2{
+    color: rgb(255, 255, 255);
+    font-size: 300%;
+    text-shadow: 2px 2px 2px rgb(0, 0, 0);
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+
+
+/* Image Gallery*/
+
+/* Create four equal columns that sits next to each other */
+  .column {
+    display: flex;
+    flex-direction: column;
+    max-width: 25%;
+    padding: 0 4px;
+    justify-content: center;
+  }
+  
+  .column img {
+    margin-top: 8px;
+    max-width: 100%;
+    border: 2px ridge violet;
+    border-radius: 10px;
+  }
+
+  #cornerBtn{
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    padding: 1em 2em;
+    background-color: violet;
+    border: violet;
+    border-radius: 10px;
+    color: black;
+    font-size: 120%;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all ease-in-out 300ms;
+  }
+
+  #cornerBtn:hover{
+    background-color: black;
+    color: violet;
+    border: 2px ridge violet;
+
+  }
+
+  footer {
+    background-color: rgb(60, 59, 58);
+    text-align: center;
+    color: violet;
+  }
+  
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media (max-width: 800px) {
+    .column {
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media (max-width: 600px) {
+    .column {
+      flex: 100%;
+      max-width: 100%;
+    }
+    .column img{
+        max-width: 100%;
+    }
+    header{
+        flex-direction: column;
+        text-align: center;
+    }
+}
